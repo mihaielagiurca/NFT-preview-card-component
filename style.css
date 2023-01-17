@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;700&family=Poppins:ital,wght@0,100;1,100;1,800&display=swap');
+
+*, ::before, ::after{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+:root{
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --Very-dark-blue-main: hsl(217, 54%, 11%);
+    --Very-dark-blue-card: hsl(216, 50%, 16%);
+    --Very-dark-blue-line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+    
+}
+img{
+    max-width: 100%;
+}
+body{
+    background-color:var(--Very-dark-blue-main);
+    font-size:18px;
+    font-family: 'Outfit', sans-serif;
+} 
+.container{
+    max-width:100%;
+    max-height: 100%;   
+    background-color: var(--Very-dark-blue-card);
+    line-height: 1.5rem;
+    border-radius: 1rem;
+    margin: 1.5rem;
+    padding: 1.5rem 1rem 0.5rem;
+}
+.main-image{
+    position: relative;
+} 
+.main-image img{
+    border-radius: 0.5rem;
+}
+.main-image div{
+    top:0;
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 7px);
+    background-color:hsl(178, 100%, 50%, 60%); ;
+    opacity:0;
+    z-index: 999;
+    border-radius: 0.5rem;
+    transition: opacity 0.2s ease-in;
+}
+.main-image div:hover{
+    opacity: 1;
+}
+.main-image div img{
+    border-radius: 0.5rem;
+    position:absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%)
+}
+h1{
+    font-size: 1.1rem;
+    padding: 0.7rem 0;
+    color: var(--White);
+}
+h1:hover{
+    color:var(--Cyan);
+}
+p{
+    font-size: 0.8rem;
+    font-weight:300;
+    color:var(--Soft-blue);
+    padding-bottom: 1rem;
+}
+ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--Soft-blue);
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid hsl(215, 51%, 70%, 20%);
+}
+ul li:first-child{
+    color: var(--Cyan);
+}
+ul li{
+    display: flex;
+    align-items: center;;
+}
+ul li img{
+    margin-right:0.5rem;
+}
+.avatar{
+    display:flex;
+    align-items: center;
+    padding: 0.5rem 0;
+}
+.avatar img{
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 0.1rem solid white;
+    border-radius: 4rem; 
+    margin-right: 1rem;
+}
+.avatar p{
+    font-size: 0.8rem;
+    font-weight: 400;
+    padding:1.5rem 0;
+}
+.avatar span{
+    color: var(--White);
+}
+.avatar span:hover{
+    color: var(--Cyan);
+}
+@media screen and (min-width:600px){
+    .container{
+        width:450px;
+        margin: 10rem auto;
+        line-height: 2rem;
+        padding: 2rem;
+    }
+    .container h1{
+        font-size: 2rem;
+        padding: 1.5rem 0 1.5rem 0;
+    }
+    .container p{
+        font-size: 1.5rem;
+    }
+    ul{
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+}
+        
+
+
